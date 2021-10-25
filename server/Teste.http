@@ -1,28 +1,32 @@
 ###
-GET http://localhost:1234/livro/listar
-###
-GET http://localhost:1234/buscar/isbn/12345678910
+GET http://localhost:1234/produto/listar
 
 ###
-POST http://localhost:1234/livro/cadastrar
+GET http://localhost:1234/buscar/codigo/6176d4fb626ad65453f77c30
+
+###
+POST http://localhost:1234/produto/cadastrar
 content-type: application/json
 
 {
-    "nome": "cOXINHA",
-    "isbn": "444",
+    "nome": "COxinha",
+    "codigo": "41",
+    "categoria": "Alimentos",
     "preco": 29.90
 }
 ###
-POST http://localhost:1234/livro/alterar
+POST http://localhost:1234/produto/alterar
 content-type: application/json
 
 {
-    "nome": "empadao",
-    "isbn": "444",
-    "preco": 1.50
+    "nome": "Arroz",
+    "codigo": "52",
+    "categoria": "Comida",
+    "preco": 29.90
 }
 ###
 
-GET http://localhost:1234/livro/remover/111
+GET http://localhost:1234/produto/remover/6176d4fb626ad65453f77c30
+content-type: application/json
 
 

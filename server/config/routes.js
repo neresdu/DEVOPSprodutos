@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const LivroController = require("../controllers/LivroController.js");
+const ProdutoController = require("../controllers/ProdutoController.js");
 
-router.get("/", LivroController.get);
+router.get("/", ProdutoController.get);
 
-router.get("/livro/listar", LivroController.get);
+router.get("/produto/listar", ProdutoController.get);
 
-router.get("/livro/remover/:isbn", LivroController.deleteByISBN);
+router.get("/produto/remover/:codigo", ProdutoController.deleteByCodigo);
 
-router.get("/buscar/isbn/:isbn", LivroController.getById);
+router.get("/buscar/codigo/:codigo", ProdutoController.getById);
 
-router.post("/livro/cadastrar", LivroController.cadastrar);
-router.post("/livro/alterar", LivroController.update);
+router.post("/produto/cadastrar", ProdutoController.cadastrar);
+router.post("/produto/alterar", ProdutoController.update);
 module.exports = router;
